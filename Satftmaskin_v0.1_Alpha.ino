@@ -50,23 +50,18 @@ void loop() {
   vUp = digitalRead(A5);
 
 
-  // CHECKS IF BUTTON 1 IS PRESSED - IN THAT CASE PRINTS TO SCREEN
   if (vUp == LOW) {
     vol += 1;
   }
-  // CHECKS IF BUTTON 2 IS PRESSED - IN THAT CASE PRINTS TO SCREEN
   if (vDown == LOW && vol > 0) {
     vol -= 1;
   }
-  // CHECKS IF BUTTON 3 IS PRESSED - IN THAT CASE PRINTS TO SCREEN
   if (sUp == LOW && strength < 100) {
     strength += 2;
   }
-  // CHECKS IF BUTTON 4 IS PRESSED - IN THAT CASE PRINTS TO SCREEN
   if (sDown == LOW && strength > 0) {
     strength -= 2;
   }
-  // CHECKS IF BUTTON 5 IS PRESSED - IN THAT CASE PRINTS TO SCREEN
   if (start == LOW) {
     delay(2000); // INSERT START FUNCTION HERE
   }
