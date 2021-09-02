@@ -198,45 +198,6 @@ void juice() {
   lcd.print("Saften er ferdig!");
 
   servo_forward();
-
-  
-
-/*
- * ===============================================
-  Vi er klare over at den følgende blokken med kode resulterer i en feilkode. Det er imidlertid mer et forsøkt tegnet bilde av løsningen.
-  Det vil bli skrevet på en mye mer ryddig, og ikke minst fungerende, måte asap.
-  Likevel, idéen er først at begge pumpene skal aktiveres. 
-  Deretter skal pumpe 2 (med saft) stå på helt til ( [ANDEL SAFT]*[REFERANSETID]*[2^0 = 1 eller 2^1 = 2 eller 2^2 = 4] ) ms har gått
-  Etterpå skal pumpe 1 fortsette for ( [ANDEL VANN]*[REFERANSETID]*[2^0 = 1 eller 2^1 = 2 eller 2^2 = 4] ) ms minus den tida som allerede har gått.
-
-  Hele idéen bygger på at tid med pumpa på er proporsjonal med volumet av væska pumpet ut.
-
-  Denne referansetiden skal kalibreres etter beste evne vha. testing.
-
-  Lite glass: 1 referanstid
-  Middels glass: 2 referansetider
-  Stort glass: 4 referansetider
-
-  Prøver på å benytte det fantastiske faktum at dette går opp i 2'er-potenser som matcher med indeksen (0,1,2). 
-  ===============================================
-*/
-/*
-  delay(((pow(2,vol))*refTime))*(conc/100)); // Lite glass: 1 referanseverdi (2cl), Middels glass: 2 referanseverdier (4cl), Stort glass (8cl) 
-  digitalWrite(pumpPin2, LOW);
-  delay((((pow(2,vol))*refTime))*(1-(conc/100))-(((pow(2,vol))*refTime))*(conc/100)));
-  digitalWrite(pumpPin1, LOW);
-
-  // Flytter koppen fram
-  servo_forward();
-
-  // Skriver ny skjerm
-  lcd.clear();
-  lcd.setCursor(0,0);
-  lcd.print("Saften er ferdig!");
-
-*/
-  
-  
   
   
   
